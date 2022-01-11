@@ -18,19 +18,11 @@ class HomePage extends StatelessWidget {
       future: menuProvider.cargarData(),
       initialData: [],
       builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
-        print(snapshot.data);
         return ListView(
           children: _listaItems(snapshot.data, context),
         );
       },
     );
-    //print(menuProvider.opciones);
-    // menuProvider.cargarData().then((opciones) {
-    //   print(opciones);
-    // });
-    // return ListView(
-    //   children: _listaItems(),
-    // );
   }
 
   List<Widget> _listaItems(List<dynamic> data, BuildContext contexto) {
@@ -46,14 +38,13 @@ class HomePage extends StatelessWidget {
           color: Colors.blue,
         ),
         onTap: () {
-          // final route = MaterialPageRoute(
-          //   builder: (contexto) => AlertPage(),
-          // );
           // Navigator.push(contexto, route);
           Navigator.pushNamed(contexto, opt["ruta"]);
         },
       );
-      lista..add(widgetTemp)..add(Divider());
+      lista
+        ..add(widgetTemp)
+        ..add(Divider());
     });
     return lista;
   }

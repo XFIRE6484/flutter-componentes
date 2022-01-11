@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element
+
 import 'package:flutter/material.dart';
 
 class HomePapeTemp extends StatelessWidget {
@@ -16,13 +18,15 @@ class HomePapeTemp extends StatelessWidget {
   }
 
   List<Widget> _crearItems() {
-    List<Widget> lista = new List<Widget>();
+    List<Widget> lista = [];
 
     for (String opt in opciones) {
       final tempWidget = ListTile(
         title: Text(opt),
       );
-      lista..add(tempWidget)..add(Divider());
+      lista
+        ..add(tempWidget)
+        ..add(Divider());
     }
     return lista;
   }

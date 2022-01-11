@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
 
 class InputPage extends StatefulWidget {
@@ -12,7 +14,9 @@ class _InputPageState extends State<InputPage> {
   String _email = "";
   String _pass = "";
   String _fecha = "";
+
   TextEditingController _inputFecha = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +46,7 @@ class _InputPageState extends State<InputPage> {
       textCapitalization: TextCapitalization.sentences,
       decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(20.0)),
-          counter: Text("Letras ${_nombre.trim().length}"),
+          counter: Text('Letras ${_nombre.trim().length}'),
           hintText: "Nombre de la Persona",
           labelText: "Nombre",
           helperText: "SOlO ES EL NOMBRE",
@@ -117,7 +121,7 @@ class _InputPageState extends State<InputPage> {
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime(2020, 11),
-      lastDate: DateTime(2021, 4),
+      lastDate: DateTime.now(),
       locale: Locale("es", "ES"),
     );
     if (picked != null) {
@@ -128,7 +132,7 @@ class _InputPageState extends State<InputPage> {
     }
   }
 
-  String _opcionSeleccionada;
+  String _opcionSeleccionada = "Volar";
   List _poderes = ["Volar", "Rayos X", "Super Aliento", "Fuerza"];
   List<DropdownMenuItem<String>> getOpcionesDropDown() {
     List<DropdownMenuItem<String>> lista = [];
@@ -144,7 +148,7 @@ class _InputPageState extends State<InputPage> {
   _crearDropDown(BuildContext context) {
     return Row(
       children: <Widget>[
-        Icon(Icons.select_all),
+        Icon(Icons.merge_type),
         SizedBox(
           width: 30.0,
         ),

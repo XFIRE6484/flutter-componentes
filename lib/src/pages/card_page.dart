@@ -24,16 +24,16 @@ Widget _cardTipo2() {
       FadeInImage(
         placeholder: AssetImage('assets/jar-loading.gif'),
         image: NetworkImage("https://wallpaperaccess.com/full/24243.jpg"),
+        fadeInDuration: Duration(seconds: 1),
         height: 300.0,
         fit: BoxFit.cover,
       ),
-      // Image(image: NetworkImage("https://wallpaperaccess.com/full/24243.jpg")),
       Container(padding: EdgeInsets.all(10.0), child: Text("Texto texto texto"))
     ]),
   );
   return Container(
     decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30.0),
+        borderRadius: BorderRadius.circular(20.0),
         color: Colors.white,
         boxShadow: <BoxShadow>[
           BoxShadow(
@@ -51,7 +51,7 @@ Widget _cardTipo2() {
 
 Widget _cardTipo1() {
   return Card(
-    elevation: 5,
+    elevation: 4,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     child: Column(
       children: <Widget>[
@@ -60,17 +60,17 @@ Widget _cardTipo1() {
           subtitle: Text("Titulo Tarjeta"),
           leading: Icon(
             Icons.photo_album,
-            color: Colors.blue,
+            color: Colors.red,
           ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text("Cancelar"),
               onPressed: () {},
             ),
-            FlatButton(
+            TextButton(
               child: Text("Ok"),
               onPressed: () {},
             )

@@ -8,11 +8,11 @@ class AlertPage extends StatelessWidget {
         title: Text("Alert Page"),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text("Mostar Alerta"),
-          color: Colors.blue,
-          textColor: Colors.white,
-          shape: StadiumBorder(),
+          // color: Colors.blue,
+          // textColor: Colors.white,
+          // shape: StadiumBorder(),
           onPressed: () => _mostrarAlerta(context),
         ),
       ),
@@ -39,11 +39,11 @@ class AlertPage extends StatelessWidget {
               children: <Widget>[Text("Contenido"), FlutterLogo(size: 100.0)],
             ),
             actions: <Widget>[
-              FlatButton(
+              OutlinedButton(
                 child: Text("Cancelar"),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              FlatButton(
+              OutlinedButton(
                 child: Text("Ok"),
                 onPressed: () => Navigator.of(context).pop(),
               )
